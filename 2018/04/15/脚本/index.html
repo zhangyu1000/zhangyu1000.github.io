@@ -79,17 +79,20 @@
 
 
 
-<meta name="description" content="脚本就是给计算机照着做的 1、作业的两个脚本a.demo.sh xxx 可在当前目录下生成目录 xxx，demo.sh yyy 可生成目录 yyyb.如果要生成的目录已经存在，则直接退出c.生成的目录结构如下： ├── css │   └── style.css ├── index.html └── js     └── main.js ![](/images/图片1523769454.jpg)">
+<meta name="description" content="脚本就是给计算机照着做的 1、作业的两个脚本a.demo.sh xxx 可在当前目录下生成目录 xxx，demo.sh yyy 可生成目录 yyyb.如果要生成的目录已经存在，则直接退出c.生成的目录结构如下： ├── css │   └── style.css ├── index.html └── js     └── main.js      -d 表示存在的意思  $1 表示传入的第一个参数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="脚本">
 <meta property="og:url" content="http://yoursite.com/2018/04/15/脚本/index.html">
 <meta property="og:site_name" content="blog">
-<meta property="og:description" content="脚本就是给计算机照着做的 1、作业的两个脚本a.demo.sh xxx 可在当前目录下生成目录 xxx，demo.sh yyy 可生成目录 yyyb.如果要生成的目录已经存在，则直接退出c.生成的目录结构如下： ├── css │   └── style.css ├── index.html └── js     └── main.js ![](/images/图片1523769454.jpg)">
+<meta property="og:description" content="脚本就是给计算机照着做的 1、作业的两个脚本a.demo.sh xxx 可在当前目录下生成目录 xxx，demo.sh yyy 可生成目录 yyyb.如果要生成的目录已经存在，则直接退出c.生成的目录结构如下： ├── css │   └── style.css ├── index.html └── js     └── main.js      -d 表示存在的意思  $1 表示传入的第一个参数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-15T06:02:05.435Z">
+<meta property="og:image" content="http://yoursite.com/images/图片1523769454.jpg">
+<meta property="og:image" content="http://yoursite.com/images/图片1523769523.jpg">
+<meta property="og:updated_time" content="2018-04-15T06:08:09.603Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="脚本">
-<meta name="twitter:description" content="脚本就是给计算机照着做的 1、作业的两个脚本a.demo.sh xxx 可在当前目录下生成目录 xxx，demo.sh yyy 可生成目录 yyyb.如果要生成的目录已经存在，则直接退出c.生成的目录结构如下： ├── css │   └── style.css ├── index.html └── js     └── main.js ![](/images/图片1523769454.jpg)">
+<meta name="twitter:description" content="脚本就是给计算机照着做的 1、作业的两个脚本a.demo.sh xxx 可在当前目录下生成目录 xxx，demo.sh yyy 可生成目录 yyyb.如果要生成的目录已经存在，则直接退出c.生成的目录结构如下： ├── css │   └── style.css ├── index.html └── js     └── main.js      -d 表示存在的意思  $1 表示传入的第一个参数">
+<meta name="twitter:image" content="http://yoursite.com/images/图片1523769454.jpg">
 
 
 
@@ -301,10 +304,8 @@
       
         <p>脚本就是给计算机照着做的</p>
 <h2 id="1、作业的两个脚本"><a href="#1、作业的两个脚本" class="headerlink" title="1、作业的两个脚本"></a>1、作业的两个脚本</h2><p>a.demo.sh xxx 可在当前目录下生成目录 xxx，demo.sh yyy 可生成目录 yyy<br>b.如果要生成的目录已经存在，则直接退出<br>c.生成的目录结构如下：<br> ├── css<br> │   └── style.css<br> ├── index.html<br> └── js<br>     └── main.js</p>
-<pre><code>![](/images/图片1523769454.jpg)
--d 表示存在的意思  $1 表示传入的第一个参数
-![](/images/图片1523769523.jpg)
-</code></pre><h2 id="2、将-local-添加到-PATH-里"><a href="#2、将-local-添加到-PATH-里" class="headerlink" title="2、将 ~/local 添加到 PATH 里"></a>2、将 ~/local 添加到 PATH 里</h2><p>a.<code>cd ~/local</code>; <code>pwd</code> 得到 local 的绝对路径<br>b.创建 ~/.bashrc：<code>touch ~/.bashrc</code><br>c.编辑 ~/.bashrc：<code>start ~/.bashrc</code>，在最后一行添加 <code>export PATH=&quot;local</code>的绝对路径:$PATH”<br>d.<code>source ~/.bashrc</code><br>之前你要运行 <code>sh ~/local/demo.txt，现在你只需要运行 demo.txt</code> 就行了（想想为什么，道理显而易见）</p>
+<p><img src="/images/图片1523769454.jpg" alt=""><br>     -d 表示存在的意思  $1 表示传入的第一个参数<br><img src="/images/图片1523769523.jpg" alt=""></p>
+<h2 id="2、将-local-添加到-PATH-里"><a href="#2、将-local-添加到-PATH-里" class="headerlink" title="2、将 ~/local 添加到 PATH 里"></a>2、将 ~/local 添加到 PATH 里</h2><p>a.<code>cd ~/local</code>; <code>pwd</code> 得到 local 的绝对路径<br>b.创建 ~/.bashrc：<code>touch ~/.bashrc</code><br>c.编辑 ~/.bashrc：<code>start ~/.bashrc</code>，在最后一行添加 <code>export PATH=&quot;local</code>的绝对路径:$PATH”<br>d.<code>source ~/.bashrc</code><br>之前你要运行 <code>sh ~/local/demo.txt，现在你只需要运行 demo.txt</code> 就行了（想想为什么，道理显而易见）</p>
 <h2 id="3、demo-txt-的后缀-txt-很无聊，删掉它"><a href="#3、demo-txt-的后缀-txt-很无聊，删掉它" class="headerlink" title="3、demo.txt 的后缀 .txt 很无聊，删掉它"></a>3、demo.txt 的后缀 .txt 很无聊，删掉它</h2><p><code>mv ~/local/demo.txt ~/local/demo</code><br>现在你只要运行 demo 就能执行该脚本了</p>
 
       
