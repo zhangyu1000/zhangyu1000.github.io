@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="前端学习">
+<meta name="description" content="1、iframe 和 a1、 嵌套页面 2、qq target=”xxx”&amp;gt;点击qq，qq页面会在iframe里出现 3、在index.html里写: index2.html里写: index3.html里写:qq（点击第一个qq会在一个新的标签页面里打开）qq（点击第二个qq会在index3的嵌套页面里打开）qq（点击第三个qq会在index2的嵌套页面里打开）qq（点击第四个qq会在in">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开博大吉">
-<meta property="og:url" content="http://yoursite.com/2018/01/27/开博大吉/index.html">
+<meta property="og:title" content="HTML元素">
+<meta property="og:url" content="http://yoursite.com/2018/04/17/HTML元素/index.html">
 <meta property="og:site_name" content="blog">
-<meta property="og:description" content="前端学习">
+<meta property="og:description" content="1、iframe 和 a1、 嵌套页面 2、qq target=”xxx”&amp;gt;点击qq，qq页面会在iframe里出现 3、在index.html里写: index2.html里写: index3.html里写:qq（点击第一个qq会在一个新的标签页面里打开）qq（点击第二个qq会在index3的嵌套页面里打开）qq（点击第三个qq会在index2的嵌套页面里打开）qq（点击第四个qq会在in">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-26T16:52:48.340Z">
+<meta property="og:image" content="http://yoursite.com/images/战盟图片1524031010.jpg">
+<meta property="og:updated_time" content="2018-04-18T05:57:56.356Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开博大吉">
-<meta name="twitter:description" content="前端学习">
+<meta name="twitter:title" content="HTML元素">
+<meta name="twitter:description" content="1、iframe 和 a1、 嵌套页面 2、qq target=”xxx”&amp;gt;点击qq，qq页面会在iframe里出现 3、在index.html里写: index2.html里写: index3.html里写:qq（点击第一个qq会在一个新的标签页面里打开）qq（点击第二个qq会在index3的嵌套页面里打开）qq（点击第三个qq会在index2的嵌套页面里打开）qq（点击第四个qq会在in">
+<meta name="twitter:image" content="http://yoursite.com/images/战盟图片1524031010.jpg">
 
 
 
@@ -119,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/27/开博大吉/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/17/HTML元素/"/>
 
 
 
 
 
-  <title>开博大吉 | blog</title>
+  <title>HTML元素 | blog</title>
   
 
 
@@ -232,7 +234,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/27/开博大吉/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/17/HTML元素/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zhangyu1000">
@@ -249,7 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">开博大吉</h1>
+          <h1 class="post-title" itemprop="name headline">HTML元素</h1>
         
 
         <div class="post-meta">
@@ -261,8 +263,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-27T00:52:48+08:00">
-                2018-01-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-17T23:23:49+08:00">
+                2018-04-17
               </time>
             
 
@@ -299,7 +301,20 @@
       
 
       
-        
+        <h2 id="1、iframe-和-a"><a href="#1、iframe-和-a" class="headerlink" title="1、iframe 和 a"></a>1、iframe 和 a</h2><p>1、<iframe src="https://www.baidu.com" name="xxx"></iframe> 嵌套页面</p>
+<p>2、<iframe name="xxx" src="#" frameborder="0"></iframe><br><a href="http://qq.com" target="_blank" rel="noopener">qq target=”xxx”&gt;</a>点击qq，qq页面会在iframe里出现</p>
+<p>3、在index.html里写:</p>
+<p><iframe src="./index2" frameborder="0"></iframe><br>index2.html里写:</p>
+<p><iframe src="./index3" frameborder="0"></iframe><br>index3.html里写:<br><a href="http://qq.com" target="_blank">qq</a>（点击第一个qq会在一个新的标签页面里打开）<br><a href="http://qq.com" target="_self">qq</a>（点击第二个qq会在index3的嵌套页面里打开）<br><a href="http://qq.com" target="_parent">qq</a>（点击第三个qq会在index2的嵌套页面里打开）<br><a href="http://qq.com" target="_top">qq</a>（点击第四个qq会在index里打开）<br><img src="/images/战盟图片1524031010.jpg" alt=""></p>
+<ol>
+<li>a 的href<br><a href="//qq.com">QQ</a>href里写的是无协议地址，意思是当前用的是http协议就自动继承http协议，用的是file就会用file协议。<br>我们在终端运行sudo npm i -g http-server即可安装一个服务器，进入你写index.html的文件夹里运行http-server即可开启服务器，然后在浏览器浏览终端返回的地址即可用http协议来访问你写的文件</li>
+</ol>
+<p>href<br>a. <a href="?name=pyz">qq</a>点击之后会在当前页面发起?name=pyz的请求<br>b. <a href="#sss">qq</a>点击之后不会发起请求，因为锚点仅仅是在当前页面内的跳转<br>c. <a href="/..">link</a>标签被点击后浏览器会发起GET / HTTP/1.1的请求，路径还是/，因为/已经是根目录，无法再往前退</p>
+<p>伪协议<br><a href="javascript:;" target="_blank" rel="noopener">qq</a>点击之后a不会做任何事情<br><a href="javascript:alert(1)" ;="" target="_blank" rel="noopener">qq</a>点击之后会弹出1<br>3.\<form></form></p>
+<p><iframe name="xxx" src="" frameborder="0"></iframe><br><a href="" target="xxx"></a><br>name这个属性与a标签结合在一起才有用</p>
+<p><a href=""></a>中页面是查看还是下载Content-type：octet-stream或者用a标签强制下载</p>
+<p>GET默认把账号密码参数放在查询参数里，不出现在第四部分，POST默认放在第四部分，但可以收东西饿让POST由查询参数</p>
+
       
     </div>
     
@@ -323,8 +338,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/27/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/04/17/HTTP/" rel="next" title="HTTP">
+                <i class="fa fa-chevron-left"></i> HTTP
               </a>
             
           </div>
@@ -333,8 +348,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/27/第二篇博客/" rel="prev" title="尝试使用 Hexo 搭建博客系统">
-                尝试使用 Hexo 搭建博客系统 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/18/Untitled-1/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -387,8 +402,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -430,6 +454,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、iframe-和-a"><span class="nav-number">1.</span> <span class="nav-text">1、iframe 和 a</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
