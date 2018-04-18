@@ -437,20 +437,25 @@
       
         
           
-            <h2 id="1、iframe-和-a"><a href="#1、iframe-和-a" class="headerlink" title="1、iframe 和 a"></a>1、iframe 和 a</h2><p>1、<iframe src="https://www.baidu.com" name="xxx"></iframe> 嵌套页面</p>
-<p>2、<iframe name="xxx" src="#" frameborder="0"></iframe><br><a href="http://qq.com" target="xxx">qq</a><br>点击qq，qq页面会在iframe里出现</p>
-<p>3、在index.html里写:</p>
-<p><iframe src="./index2" frameborder="0"></iframe><br>index2.html里写:</p>
-<p><iframe src="./index3" frameborder="0"></iframe><br>index3.html里写:<br><a href="http://qq.com" target="_blank">qq</a>（点击第一个qq会在一个新的标签页面里打开）<br><a href="http://qq.com" target="_self">qq</a>（点击第二个qq会在index3的嵌套页面里打开）<br><a href="http://qq.com" target="_parent">qq</a>（点击第三个qq会在index2的嵌套页面里打开）<br><a href="http://qq.com" target="_top">qq</a>（点击第四个qq会在index里打开）<br><img src="/images/战盟图片1524031010.jpg" alt=""></p>
-<ol>
-<li>a 的href<br><a href="//qq.com">QQ</a>href里写的是无协议地址，意思是当前用的是http协议就自动继承http协议，用的是file就会用file协议。<br>我们在终端运行sudo npm i -g http-server即可安装一个服务器，进入你写index.html的文件夹里运行http-server即可开启服务器，然后在浏览器浏览终端返回的地址即可用http协议来访问你写的文件</li>
-</ol>
-<p>href<br>a. <a href="?name=pyz">qq</a>点击之后会在当前页面发起?name=pyz的请求<br>b. <a href="#sss">qq</a>点击之后不会发起请求，因为锚点仅仅是在当前页面内的跳转<br>c. <a href="/..">link</a>标签被点击后浏览器会发起GET / HTTP/1.1的请求，路径还是/，因为/已经是根目录，无法再往前退</p>
-<p>伪协议<br><a href="javascript:;" target="_blank" rel="noopener">qq</a>点击之后a不会做任何事情<br><a href="javascript:alert(1)" ;="" target="_blank" rel="noopener">qq</a>点击之后会弹出1<br>3.\<form></form></p>
-<p><iframe name="xxx" src="" frameborder="0"></iframe><br><a href="" target="xxx"></a><br>name这个属性与a标签结合在一起才有用</p>
-<p><a href=""></a>中页面是查看还是下载Content-type：octet-stream或者用a标签强制下载</p>
-<p>GET默认把账号密码参数放在查询参数里，不出现在第四部分，POST默认放在第四部分，但可以收东西饿让POST由查询参数</p>
+            <h2 id="1、iframe"><a href="#1、iframe" class="headerlink" title="1、iframe"></a>1、iframe</h2><p>1、<code>&lt;iframe src=&quot;https://www.baidu.com&quot; name=&quot;xxx&quot;&gt;&lt;/iframe&gt;</code>嵌套页面</p>
+<p>2、<code>&lt;iframe name=&quot;xxx&quot; src=&quot;#&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</code>  name这个属性与a标签结合在一起才有用<br><code>&lt;a href=&quot;http://qq.com&quot; target=&quot;xxx&quot;&gt;qq&lt;/a&gt;</code><br>点击qq，qq页面会在iframe里出现</p>
+<p>3、在index.html里写:<br><code>&lt;iframe src=&quot;./index2&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</code><br>index2.html里写:<br><code>&lt;iframe src=&quot;./index3&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</code><br>index3.html里写:<br><code>&lt;a href=&quot;http://qq.com&quot; target=_blank&gt;qq&lt;/a&gt;</code>（点击第一个qq会在一个新的标签页面里打开）<br><code>&lt;a href=&quot;http://qq.com&quot; target=_self&gt;qq&lt;/a&gt;</code>（点击第二个qq会在index3的嵌套页面里打开）<br><code>&lt;a href=&quot;http://qq.com&quot; target=_parent&gt;qq&lt;/a&gt;</code>（点击第三个qq会在index2的嵌套页面里打开）<br><code>&lt;a href=&quot;http://qq.com&quot; target=_top&gt;qq&lt;/a&gt;</code>（点击第四个qq会在index里打开）<br><img src="/images/战盟图片1524031010.jpg" alt=""></p>
+<h2 id="2-a"><a href="#2-a" class="headerlink" title="2. a"></a>2. a</h2><p><a href=""></a>中页面是查看还是下载Content-type：octet-stream或者用a标签强制下载，<code>&lt;a href=&quot;http://qq.com&quot; download&gt;下载&lt;/a&gt;</code> </p>
+<p><code>&lt;a href=&quot;//qq.com&quot;&gt;QQ&lt;/a&gt;</code>href里的是无协议地址，当前用的是http协议就自动继承http协议，用的是file就继承file协议。<br>为了解决，在Git Bash 运行npm i -g http-server可安装一个服务器，在index.html的文件夹运行http-server可开启服务器，在浏览器浏览终端返回的地址即可用http协议来访问写的文件。</p>
+<p>a.当在index.html中点击<code>&lt;a href=&quot;xxx.html&quot;&gt;qq&lt;/a&gt;</code>，会访问/xxx.html而不是/index.html/xxx.html<br>b.<code>&lt;a href=&quot;?name=zy&quot;&gt;qq&lt;/a&gt;</code>点击之后会在当前页面发起?name=zy的请求<br>c.<code>&lt;a href=&quot;#sss&quot;&gt;qq&lt;/a&gt;</code>点击之后不会发起请求，因为锚点作用是在页面内的跳转<br>d.<code>&lt;a href=&quot;/..&quot;&gt;link&lt;/a&gt;</code>标签被点击后浏览器会发起GET / HTTP/1.1的请求，路径还是/，因为/已经是根目录，无法再往前退</p>
+<p>伪协议:<br>a.<code>&lt;a href=&quot;javascript:;&quot;&gt;qq&lt;/a&gt;</code>点击之后不会做任何事情<br>b.<code>&lt;a href=&quot;javascript:alert(1)&quot;;&gt;qq&lt;/a&gt;</code>点击之后会弹出1</p>
+<h2 id="3"><a href="#3" class="headerlink" title="3."></a>3.<form></form></h2><pre><code>    &lt;form&gt;和&lt;a&gt;的区别: a.&lt;a&gt;提交时是GET请求 b.&lt;form&gt;可以用method=“post”发送POST请求 c.&lt;form&gt;里必须要有一个submit按钮才能被提交
+     GET默认把账号密码参数放在查询参数里，不出现在第四部分，POST默认放在第四部分，但可以写东西让POST让查询参数，如
+    &lt;ol&gt;
+        &lt;li&gt;`&lt;form action=&quot;user?zzz=3&quot; method=&quot;post&quot;&gt;qq&lt;/a&gt;`&lt;/li&gt;
+          &lt;li&gt;  ` &lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;`/&lt;li&gt;
+           &lt;li&gt;   `&lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;`&lt;/li&gt;
+           &lt;li&gt;   `&lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;`&lt;/li&gt;
+         &lt;li&gt; `&lt;/form&gt;`&lt;/li&gt;                  
 
+    &lt;/ol&gt;
+但两者都是发起请求，target用法是一样的，iframe用法一样。
+</code></pre>
           
         
       
