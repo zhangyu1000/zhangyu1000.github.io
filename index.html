@@ -438,7 +438,7 @@
         
           
             <h2 id="1、iframe-和-a"><a href="#1、iframe-和-a" class="headerlink" title="1、iframe 和 a"></a>1、iframe 和 a</h2><p>1、<iframe src="https://www.baidu.com" name="xxx"></iframe> 嵌套页面</p>
-<p>2、<iframe name="xxx" src="#" frameborder="0"></iframe><br><a href="http://qq.com" target="_blank" rel="noopener">qq target=”xxx”&gt;</a>点击qq，qq页面会在iframe里出现</p>
+<p>2、<iframe name="xxx" src="#" frameborder="0"></iframe><br><a href="http://qq.com" target="xxx">qq</a><br>点击qq，qq页面会在iframe里出现</p>
 <p>3、在index.html里写:</p>
 <p><iframe src="./index2" frameborder="0"></iframe><br>index2.html里写:</p>
 <p><iframe src="./index3" frameborder="0"></iframe><br>index3.html里写:<br><a href="http://qq.com" target="_blank">qq</a>（点击第一个qq会在一个新的标签页面里打开）<br><a href="http://qq.com" target="_self">qq</a>（点击第二个qq会在index3的嵌套页面里打开）<br><a href="http://qq.com" target="_parent">qq</a>（点击第三个qq会在index2的嵌套页面里打开）<br><a href="http://qq.com" target="_top">qq</a>（点击第四个qq会在index里打开）<br><img src="/images/战盟图片1524031010.jpg" alt=""></p>
