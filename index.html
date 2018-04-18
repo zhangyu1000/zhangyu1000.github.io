@@ -232,140 +232,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/18/Untitled-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="zhangyu1000">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/18/Untitled-1/" itemprop="url">未命名</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-18T11:43:23+08:00">
-                2018-04-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <form action="user">
-   <input type="text" name="username">
-   <input type="password" name="password">
-   <input type="submit" value="提交">   
-  </form>
-</body>
-</html>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/17/HTML元素/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -444,7 +310,7 @@
 <p><code>&lt;a href=&quot;//qq.com&quot;&gt;QQ&lt;/a&gt;</code>href里的是无协议地址，当前用的是http协议就自动继承http协议，用的是file就继承file协议。<br>为了解决，在Git Bash 运行npm i -g http-server可安装一个服务器，在index.html的文件夹运行http-server可开启服务器，在浏览器浏览终端返回的地址即可用http协议来访问写的文件。</p>
 <p>a.当在index.html中点击<code>&lt;a href=&quot;xxx.html&quot;&gt;qq&lt;/a&gt;</code>，会访问/xxx.html而不是/index.html/xxx.html<br>b.<code>&lt;a href=&quot;?name=zy&quot;&gt;qq&lt;/a&gt;</code>点击之后会在当前页面发起?name=zy的请求<br>c.<code>&lt;a href=&quot;#sss&quot;&gt;qq&lt;/a&gt;</code>点击之后不会发起请求，因为锚点作用是在页面内的跳转<br>d.<code>&lt;a href=&quot;/..&quot;&gt;link&lt;/a&gt;</code>标签被点击后浏览器会发起GET / HTTP/1.1的请求，路径还是/，因为/已经是根目录，无法再往前退</p>
 <p>伪协议:<br>a.<code>&lt;a href=&quot;javascript:;&quot;&gt;qq&lt;/a&gt;</code>点击之后不会做任何事情<br>b.<code>&lt;a href=&quot;javascript:alert(1)&quot;;&gt;qq&lt;/a&gt;</code>点击之后会弹出1</p>
-<h2 id="3"><a href="#3" class="headerlink" title="3."></a>3.<form></form></h2><p><form>和<a>的区别: a.<a>提交时是GET请求 b.<form>可以用method=“post”发送POST请求 c.<form>里必须要有一个submit按钮才能被提交<br>GET默认把账号密码参数放在查询参数里，不出现在第四部分，POST默认放在第四部分，但可以写东西让POST让查询参数，如:<br> <ol><br>   <li> <code>&lt;form action=&quot;user?zzz=3&quot; method=&quot;post&quot;&gt;qq&lt;/a&gt;</code></li><br>   <li><code>&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;</code></li><br>   <li> <code>&lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;</code></li><br>   <li><code>&lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;</code></li><br>   <li><code>&lt;/form&gt;</code></li><br> </ol>       </form></form></a></a></form></p>
+<h2 id="3"><a href="#3" class="headerlink" title="3."></a>3.<form></form></h2><p><form>和<a>的区别: a.<a>提交时是GET请求 b.<form>可以用method=“post”发送POST请求 c.<form>里必须要有一个submit按钮才能被提交<br>GET默认把账号密码参数放在查询参数里，不出现在第四部分，POST默认放在第四部分，但可以写东西让POST让查询参数，如:<br> <ol><br>   <li> <code>&lt;form action=&quot;user?zzz=3&quot; method=&quot;post&quot;&gt;qq&lt;/a&gt;</code></li>   <li><code>&lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;</code></li>   <li> <code>&lt;input type=&quot;password&quot; name=&quot;password&quot;&gt;</code></li>   <li><code>&lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;</code></li>   <li><code>&lt;/form&gt;</code></li><br> </ol>       </form></form></a></a></form></p>
 <p>但两者都是发起请求，target用法是一样的，iframe用法一样。</p>
 
           
@@ -1391,7 +1257,7 @@ d. 进入下载的目录</code>npm install hexo –save`<br>e. 就可以按照�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
