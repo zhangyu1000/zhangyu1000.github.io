@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="前端学习">
+<meta name="description" content="1、引入css的4种方法a、内联 style 属性&amp;lt;h1 style =&amp;quot;text-align:center;color:red;&amp;quot;&amp;gt;zy&amp;lt;/h1&amp;gt; b、style 标签1234567&amp;lt;style&amp;gt;  h1&amp;#123;   text-align:center; color:red;   &amp;#125;&amp;lt;/style&amp;gt;&amp;lt;h1&amp;g">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开博大吉">
-<meta property="og:url" content="http://yoursite.com/2018/01/27/开博大吉/index.html">
+<meta property="og:title" content="css入门">
+<meta property="og:url" content="http://yoursite.com/2018/04/23/css入门/index.html">
 <meta property="og:site_name" content="blog">
-<meta property="og:description" content="前端学习">
+<meta property="og:description" content="1、引入css的4种方法a、内联 style 属性&amp;lt;h1 style =&amp;quot;text-align:center;color:red;&amp;quot;&amp;gt;zy&amp;lt;/h1&amp;gt; b、style 标签1234567&amp;lt;style&amp;gt;  h1&amp;#123;   text-align:center; color:red;   &amp;#125;&amp;lt;/style&amp;gt;&amp;lt;h1&amp;g">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-26T16:52:48.340Z">
+<meta property="og:updated_time" content="2018-05-01T14:52:26.105Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开博大吉">
-<meta name="twitter:description" content="前端学习">
+<meta name="twitter:title" content="css入门">
+<meta name="twitter:description" content="1、引入css的4种方法a、内联 style 属性&amp;lt;h1 style =&amp;quot;text-align:center;color:red;&amp;quot;&amp;gt;zy&amp;lt;/h1&amp;gt; b、style 标签1234567&amp;lt;style&amp;gt;  h1&amp;#123;   text-align:center; color:red;   &amp;#125;&amp;lt;/style&amp;gt;&amp;lt;h1&amp;g">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/27/开博大吉/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/23/css入门/"/>
 
 
 
 
 
-  <title>开博大吉 | blog</title>
+  <title>css入门 | blog</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/27/开博大吉/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/23/css入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zhangyu1000">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">开博大吉</h1>
+          <h1 class="post-title" itemprop="name headline">css入门</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-27T00:52:48+08:00">
-                2018-01-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-23T19:06:26+08:00">
+                2018-04-23
               </time>
             
 
@@ -299,7 +299,21 @@
       
 
       
-        
+        <h2 id="1、引入css的4种方法"><a href="#1、引入css的4种方法" class="headerlink" title="1、引入css的4种方法"></a>1、引入css的4种方法</h2><p>a、内联 style 属性<br><code>&lt;h1 style =&quot;text-align:center;color:red;&quot;&gt;zy&lt;/h1&gt;</code></p>
+<p>b、style 标签<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">  h1&#123;</span><br><span class="line">   text-align:center; color:red;</span><br><span class="line">   &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;h1&gt;zy&lt;/h1&gt;</span><br></pre></td></tr></table></figure></p>
+<p>b、外部文件 css link<br><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;./a.css&quot;&gt;</code></p>
+<p>在a.css中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">h1&#123;</span><br><span class="line">    text-align：center;</span><br><span class="line">    color:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>d、@import url（./b.css）相对路径和绝对路径都行<br>在a.css中引入b.css</p>
+<h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><p>给你要写的css标签加上border<br><code>border:1px solid red;</code><br>让你知道可能出现的问题在哪里</p>
+<h2 id="3、导航"><a href="#3、导航" class="headerlink" title="3、导航"></a>3、导航</h2><p>a、去掉导航前面的点<code>&lt;ul style=&quot;list-style: none;&quot;&gt;</code><br>去掉标签的默认样式<code>&lt;ul style=&quot;margin: 0;padding: 0;&quot;&gt;</code></p>
+<p>在css文件中<br>b、.topNavBar&gt;nav&gt;ul&gt;li&gt;a{}要想生效一定要和html标签的顺序严格对应</p>
+<p>c、使导航栏横向<br>方法为给<br>html中<code>&lt;ul class=&quot;clearfix&quot;&gt;</code>,<br>css中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.topNavBar&gt;nav&gt;ul&gt;li&#123;</span><br><span class="line">&lt;li style=&quot;float:left;&quot;&gt;，</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后下面是clearfix的css<br>.clearfix::after{<br>  content: “”;<br>  display: block;<br>  clear: both;<br>}<br>它的功能是防止出现bug</p>
+<p>d、                  .topNavBar&gt;nav&gt;ul&gt;li&gt;a{<br>    改变a标签的字体大小 font-size: 12px;<br>    字体加粗           font-weight: bold;<br>    改变字体颜色       color: #；<br>    去掉下划线         text-decoration: none；<br>                      }<br>    给标签间距       .topNavBar&gt;nav&gt;ul&gt;li{<br>                      margin-left: 17px;<br>                      margin-right: 17px;<br>                      }</p>
+<p>e、 让标签点击出现边框.topNavBar&gt;nav&gt;ul&gt;li&gt;a:hover{<br>                      boder-bottem:1px solid red;<br>                      }<br>    但这样写边框会让间距改变，则我们需要先给一个透明边框则不会：<br>                    .topNavBar&gt;nav&gt;ul&gt;li&gt;a{<br>                      border-bottem:1px solid transparent;<br>                      }<br>f、  为了让li包裹住a<br>                    .topNavBar&gt;nav&gt;ul&gt;li&gt;a{<br>                      display:block;<br>                      } </p>
+<p> 改变字体时需记得加上范围，例如<br>                .topNavBar .logo .card{}   </p>
+<pre><code>body有固定的margin，所以需要给margin：0；消除掉，再自己手动控制添加padding           
+</code></pre>
       
     </div>
     
@@ -323,8 +337,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/27/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/04/17/HTML元素/" rel="next" title="HTML元素">
+                <i class="fa fa-chevron-left"></i> HTML元素
               </a>
             
           </div>
@@ -333,8 +347,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/27/第二篇博客/" rel="prev" title="尝试使用 Hexo 搭建博客系统">
-                尝试使用 Hexo 搭建博客系统 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/27/css布局与定位/" rel="prev" title="css布局与定位">
+                css布局与定位 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -387,8 +401,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -430,6 +453,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、引入css的4种方法"><span class="nav-number">1.</span> <span class="nav-text">1、引入css的4种方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、"><span class="nav-number">2.</span> <span class="nav-text">2、</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、导航"><span class="nav-number">3.</span> <span class="nav-text">3、导航</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

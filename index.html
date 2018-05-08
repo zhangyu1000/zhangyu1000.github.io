@@ -232,6 +232,274 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/27/css布局与定位/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhangyu1000">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/27/css布局与定位/" itemprop="url">css布局与定位</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-27T20:22:29+08:00">
+                2018-04-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="4、宽高度"><a href="#4、宽高度" class="headerlink" title="4、宽高度"></a>4、宽高度</h2><p>a、div（块级元素）：高度由内部文档流元素高度的总和决定,而且是所有内容中最高的内容决定的。（文档流：文档内元素的流动方向，内联元素是从左往右，块级元素是从上往下。）<br>b、span（内联元素）：行内元素内容为字的元素的行高是由字体的默认行高决定的。margin和padding也无效。(word-break可以打断内联元素很长的单词，常用的值有break all和break word）。内容为基线对齐。<br>c、块级元素会独占一行（即无法与其他元素显示在同一行内，除非你显式修改元素的 display 属性），而内联元素则都会在一行内显示。<br>   块级元素可以设置 width、height 属性，而内联元素设置无效。<br>   块级元素的 width 默认为 auto，而内联元素则是根据其自身的内容或子元素来决定其宽度。<br>   当块级元素涉及到内联元素，设置div行高line—height也无效，要设置height才能改变高度，某些时候div中line—height大于span中font-size也可以。或者设置padding。<br>d、要想让<code>&lt;span&gt;</code> 也可以改变宽高，可以通过设置 display: block; 来达到效果。当 display 的值设为 block 时，元素将以块级形式呈现；当 display 值设为 inline 时，元素将以内联形式呈现。<br>   若既想让元素在行内显示，又能设置宽高，可以设置：display: inline-block;</p>
+<p>注意：不到情非得已不要使用height,width。使用img不得已用到height，width。当使用width：100%并且padding不等于0时，子元素大于父元素，可在子元素底下给其加一个子元素，将原来子元素内容移至它，并利用原来的子元素的padding调整宽度。<br>对于display:inline(内联元素)的元素，设置width/height/上下margin和padding都是无效的</p>
+<h2 id="5、居中"><a href="#5、居中" class="headerlink" title="5、居中"></a>5、居中</h2><p>a、让背景图居中，且自适应屏幕<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">background: url(&quot;#&quot;) no-repeat center center ;</span><br><span class="line">background-size: cover;</span><br></pre></td></tr></table></figure></p>
+<p>b、让div水平居中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">margin-left:auto;</span><br><span class="line">margin-right:auto;</span><br></pre></td></tr></table></figure></p>
+<p>c、让一个div在父级元素中绝对居中（上下左右全居中）</p>
+<p><1>：<br>父元素加:<br><code>position:relative;</code>   若父级元素是body可以不用加</1></p>
+<p>再给子元素div加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line"> position: absolute;</span><br><span class="line"> top: 0;</span><br><span class="line"> left: 0;</span><br><span class="line"> bottom: 0;</span><br><span class="line"> right: 0;</span><br><span class="line"> margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><2>：<br>给它的父元素加：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">display: flex;               让它变成一个弹性盒</span><br><span class="line">justify-content: center;     水平居中</span><br><span class="line">align-items: center;         垂直居中</span><br></pre></td></tr></table></figure></2></p>
+<p>让内联元素居中，给它们的父元素加上<br> <code>text-align:center;</code><br>若不是内联元素想让它居中，则加<code>display:inline-block</code>，加了之后一般还要加下面这句，不然可能会有bug（下面可能会空出一行）<br><code>vertical-align: top;</code></p>
+<h2 id="6、让导航栏在同一行里均匀分布"><a href="#6、让导航栏在同一行里均匀分布" class="headerlink" title="6、让导航栏在同一行里均匀分布"></a>6、让导航栏在同一行里均匀分布</h2><p>给ul加css<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ul&#123;</span><br><span class="line">  display:flex;  </span><br><span class="line">  justyfy-content:space-between;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>去掉li的float:left<br>去掉ul的clearfix</p>
+<h2 id="7-用css做三角形"><a href="#7-用css做三角形" class="headerlink" title="7. 用css做三角形"></a>7. 用css做三角形</h2><p>等腰三角形：<br>div{<br>  border:50px solid transparent;<br>  width:0;<br>  height:0;<br>  border-bottom-color:red;<br>}</p>
+<p>直角三角形：<br>div{<br>  border:50px solid transparent;<br>  width:0;<br>  height:0;<br>  border-top-width:0;<br>  border-left-color:red;<br>}</p>
+<h2 id="8、-怎样脱离文档流"><a href="#8、-怎样脱离文档流" class="headerlink" title="8、 怎样脱离文档流"></a>8、 怎样脱离文档流</h2><p>a、相对于窗口定位：<br>position:fixed<br>b、相对于父级元素定位：<br>在父级元素加上：position:relative<br>给自己加上：position:absolute（绝对定位后元素会变成display:block）<br>c、float:left</p>
+<h2 id="9、-使用-before和-after"><a href="#9、-使用-before和-after" class="headerlink" title="9、 使用::before和::after"></a>9、 使用::before和::after</h2><p>两者皆相当于div</p>
+<p>要加上这两行的代码，才会显示内容<br>content: “”;<br>display:block;    （如果是position:absolute就不用加，因为绝对定位后元素会默认display:block;）</p>
+<h2 id="10、加上旋转的css动画效果"><a href="#10、加上旋转的css动画效果" class="headerlink" title="10、加上旋转的css动画效果"></a>10、加上旋转的css动画效果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@keyframes spin&#123;</span><br><span class="line">  from &#123;</span><br><span class="line">    transform: rotate(0deg);</span><br><span class="line"> &#125;</span><br><span class="line">  to &#123;</span><br><span class="line">    transform: rotate(360deg);</span><br><span class="line">  &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#yinyang&#123;</span><br><span class="line">  animation-duration: 3s;</span><br><span class="line">  animation-name: spin;</span><br><span class="line">  animation-iteration-count: infinite;</span><br><span class="line">  animation-timing-function: linear;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/23/css入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhangyu1000">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/23/css入门/" itemprop="url">css入门</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-23T19:06:26+08:00">
+                2018-04-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1、引入css的4种方法"><a href="#1、引入css的4种方法" class="headerlink" title="1、引入css的4种方法"></a>1、引入css的4种方法</h2><p>a、内联 style 属性<br><code>&lt;h1 style =&quot;text-align:center;color:red;&quot;&gt;zy&lt;/h1&gt;</code></p>
+<p>b、style 标签<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">  h1&#123;</span><br><span class="line">   text-align:center; color:red;</span><br><span class="line">   &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">&lt;h1&gt;zy&lt;/h1&gt;</span><br></pre></td></tr></table></figure></p>
+<p>b、外部文件 css link<br><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;./a.css&quot;&gt;</code></p>
+<p>在a.css中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">h1&#123;</span><br><span class="line">    text-align：center;</span><br><span class="line">    color:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>d、@import url（./b.css）相对路径和绝对路径都行<br>在a.css中引入b.css</p>
+<h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><p>给你要写的css标签加上border<br><code>border:1px solid red;</code><br>让你知道可能出现的问题在哪里</p>
+<h2 id="3、导航"><a href="#3、导航" class="headerlink" title="3、导航"></a>3、导航</h2><p>a、去掉导航前面的点<code>&lt;ul style=&quot;list-style: none;&quot;&gt;</code><br>去掉标签的默认样式<code>&lt;ul style=&quot;margin: 0;padding: 0;&quot;&gt;</code></p>
+<p>在css文件中<br>b、.topNavBar&gt;nav&gt;ul&gt;li&gt;a{}要想生效一定要和html标签的顺序严格对应</p>
+<p>c、使导航栏横向<br>方法为给<br>html中<code>&lt;ul class=&quot;clearfix&quot;&gt;</code>,<br>css中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.topNavBar&gt;nav&gt;ul&gt;li&#123;</span><br><span class="line">&lt;li style=&quot;float:left;&quot;&gt;，</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>然后下面是clearfix的css<br>.clearfix::after{<br>  content: “”;<br>  display: block;<br>  clear: both;<br>}<br>它的功能是防止出现bug</p>
+<p>d、                  .topNavBar&gt;nav&gt;ul&gt;li&gt;a{<br>    改变a标签的字体大小 font-size: 12px;<br>    字体加粗           font-weight: bold;<br>    改变字体颜色       color: #；<br>    去掉下划线         text-decoration: none；<br>                      }<br>    给标签间距       .topNavBar&gt;nav&gt;ul&gt;li{<br>                      margin-left: 17px;<br>                      margin-right: 17px;<br>                      }</p>
+<p>e、 让标签点击出现边框.topNavBar&gt;nav&gt;ul&gt;li&gt;a:hover{<br>                      boder-bottem:1px solid red;<br>                      }<br>    但这样写边框会让间距改变，则我们需要先给一个透明边框则不会：<br>                    .topNavBar&gt;nav&gt;ul&gt;li&gt;a{<br>                      border-bottem:1px solid transparent;<br>                      }<br>f、  为了让li包裹住a<br>                    .topNavBar&gt;nav&gt;ul&gt;li&gt;a{<br>                      display:block;<br>                      } </p>
+<p> 改变字体时需记得加上范围，例如<br>                .topNavBar .logo .card{}   </p>
+<pre><code>body有固定的margin，所以需要给margin：0；消除掉，再自己手动控制添加padding           
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/17/HTML元素/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -306,6 +574,7 @@
             <h2 id="1、-iframe标签"><a href="#1、-iframe标签" class="headerlink" title="1、 iframe标签"></a>1、 iframe标签</h2><p>1、<code>&lt;iframe src=&quot;https://www.baidu.com&quot; name=&quot;xxx&quot;&gt;&lt;/iframe&gt;</code>嵌套页面</p>
 <p>2、<code>&lt;iframe name=&quot;xxx&quot; src=&quot;#&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</code>  name这个属性与a标签结合在一起才有用<br><code>&lt;a href=&quot;http://qq.com&quot; target=&quot;xxx&quot;&gt;qq&lt;/a&gt;</code><br>点击qq，qq页面会在iframe里出现</p>
 <p>3、在index.html里写:<br><code>&lt;iframe src=&quot;./index2&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</code><br>index2.html里写:<br><code>&lt;iframe src=&quot;./index3&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;</code><br>index3.html里写:<br><code>&lt;a href=&quot;http://qq.com&quot; target=_blank&gt;qq&lt;/a&gt;</code>（点击第一个qq会在一个新的标签页面里打开）<br><code>&lt;a href=&quot;http://qq.com&quot; target=_self&gt;qq&lt;/a&gt;</code>（点击第二个qq会在index3的嵌套页面里打开）<br><code>&lt;a href=&quot;http://qq.com&quot; target=_parent&gt;qq&lt;/a&gt;</code>（点击第三个qq会在index2的嵌套页面里打开）<br><code>&lt;a href=&quot;http://qq.com&quot; target=_top&gt;qq&lt;/a&gt;</code>（点击第四个qq会在index里打开）<br><img src="/images/战盟图片1524031010.jpg" alt=""></p>
+<p>相对路径和绝对路径都行</p>
 <h2 id="2-a标签"><a href="#2-a标签" class="headerlink" title="2. a标签"></a>2. a标签</h2><p>1、<code>&lt;a href=&quot;&quot;&gt;&lt;/a&gt;</code>中页面是查看还是下载Content-type：octet-stream或者用a标签强制下载，<code>&lt;a href=&quot;http://qq.com&quot; download&gt;下载&lt;/a&gt;</code> </p>
 <p>2、<code>&lt;a href=&quot;//qq.com&quot;&gt;QQ&lt;/a&gt;</code>href里的是无协议地址，当前用的是http协议就自动继承http协议，用的是file就继承file协议。<br>为了解决，在Git Bash 运行npm i -g http-server可安装一个服务器，在index.html的文件夹运行http-server可开启服务器，在浏览器浏览终端返回的地址即可用http协议来访问写的文件。</p>
 <p>a.当在index.html中点击<code>&lt;a href=&quot;xxx.html&quot;&gt;qq&lt;/a&gt;</code>，会访问/xxx.html而不是/index.html/xxx.html<br>b.<code>&lt;a href=&quot;?name=zy&quot;&gt;qq&lt;/a&gt;</code>点击之后会在当前页面发起?name=zy的请求<br>c.<code>&lt;a href=&quot;#sss&quot;&gt;qq&lt;/a&gt;</code>点击之后不会发起请求，因为锚点作用是在页面内的跳转<br>d.<code>&lt;a href=&quot;/..&quot;&gt;link&lt;/a&gt;</code>标签被点击后浏览器会发起GET / HTTP/1.1的请求，路径还是/，因为/已经是根目录，无法再往前退</p>
@@ -347,7 +616,7 @@
     `&lt;/table&gt;`
     thead tbody tfoot不写浏览器会自动将他们加入到tbody里
 </code></pre><p><img src="/images/战盟图片1524117505.jpg" alt=""><br>    加入此段，将边框合并<br>   <code>table{</code><br>      <code>border-collapse: collapse;</code><br>   <code>}</code><br>  <code>&lt;/style&gt;</code><br><img src="/images/战盟图片1524117860.jpg" alt=""></p>
-<h2 id="7、textarea"><a href="#7、textarea" class="headerlink" title="7、textarea"></a>7、textarea</h2>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea style=&quot;resize: none; width: 200px; height: 100px;&quot;  name=&quot;爱好&quot;&gt;&lt;/textarea&gt;`但是用css更好</span><br><span class="line">或者 `&lt;textarea style=&quot;resize: none&quot;; col=&quot;100&quot; rows=&quot;10&quot;;&quot;  name=&quot;爱好&quot;&gt;&lt;/textarea&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="7、textarea"><a href="#7、textarea" class="headerlink" title="7、textarea"></a>7、textarea</h2>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;textarea style=&quot;resize: none; width: 200px; height: 100px;&quot;  name=&quot;爱好&quot;&gt;&lt;/textarea&gt;用css更好</span><br><span class="line">或者 &lt;textarea style=&quot;resize: none&quot;; col=&quot;100&quot; rows=&quot;10&quot;;&quot;  name=&quot;爱好&quot;&gt;&lt;/textarea&gt;</span><br></pre></td></tr></table></figure>
 <p>  resize设置为none，防止用户可以随意更改输入框的大小<br>  <img src="/images/战盟图片1524119099.jpg" alt=""></p>
 
           
@@ -1294,7 +1563,7 @@ d. 进入下载的目录</code>npm install hexo –save`<br>e. 就可以按照�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
